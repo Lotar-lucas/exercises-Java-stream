@@ -19,9 +19,8 @@ public class Main {
     System.out.println("Exercício 1");
     System.out.println("Lista original: " + numbers);
 
-    ArrayList<Integer> numbersFilters = numbers.stream()
-      .filter(num-> num %2 != 0)
-      .collect(Collectors.toCollection(ArrayList::new));
+    String numbersFilters =  numbers.stream()
+      .filter(num-> num %2 == 0).toList().toString();
 
     System.out.println("Lista filtrada: " + numbersFilters);
 
